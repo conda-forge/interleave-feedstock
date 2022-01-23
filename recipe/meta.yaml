@@ -1,5 +1,5 @@
 {% set name = "interleave" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 650ac2c9ae782b7d9a3997cab1fabbb1699758213e0db1d0fae7c6d06cd8c27d
+  sha256: 4f17bf79d96e3ad262e204c83171f869fdffdd005fa4fedad072bbc5ca4a02de
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -21,7 +21,6 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - typing-extensions
 
 test:
   requires:
