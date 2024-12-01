@@ -1,13 +1,13 @@
 {% set name = "interleave" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 210969c607828ecafc5e425532a6b6c10d09f1343e5976238ca15e8a07fb5118
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0cdc1462acad1f5d5643aa4e9c5fffa7ea874c0777f40c95cfc2a750a5065ad2
 
 build:
   noarch: python
